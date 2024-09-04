@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html 
+	lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> 嵌入式介绍 -  Hexo</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+		<link
+			rel="shortcut icon"
+			href="https://gitee.com/wengerking/blog1/tree/master/blog.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+			
+				
+<link rel="stylesheet" href="/style.css">
+
+			
+				
+<link rel="stylesheet" href="/custom.css">
+
+			
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('https://s1.imagehub.cc/images/2023/08/07/blog.jpeg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="Hexo">
+        <img
+			src="https://s1.imagehub.cc/images/2023/08/12/u32436481944195944232fm253fmtautoapp138fJPEG.webp"
+			alt="John Doe"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2023/08/12/u32436481944195944232fm253fmtautoapp138fJPEG.webp" title="John Doe">
+			<img
+				src="https://s1.imagehub.cc/images/2023/08/12/u32436481944195944232fm253fmtautoapp138fJPEG.webp"
+				alt="John Doe"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>11</div>
+		<div><span>标签</span>0</div>
+		<div><span>分类</span>0</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				我的朋友
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3417498862&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+		
+			
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2024
+		<a href="/">John Doe</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="https://s1.imagehub.cc/images/2023/08/21/29100729bb2bca645a97450c081a9b34.jpeg"
+				data-sizes="auto"
+				alt="嵌入式介绍"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>嵌入式介绍</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2099年08月14日</a>
+			<a><i class="kirafont icon-edit-fill"></i>2.1k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 8 分钟</a>
+		</div>
+		<h3><span id="什么是嵌入式">什么是嵌入式？</span></h3><p>凡是从事计算机或电子信息相关领域工作的童鞋，一定都听说过嵌入式吧  <br><br>然而对于非相关专业的童鞋来说肯定是一知半解，之觉得嵌入式“高端”但具体什么是嵌入式却一脸懵逼。<br>那么。到底什么是嵌入式呢. <br></p>
+<p>嵌入式，一般是指嵌入式系统，英文叫作：embeddedsystem 。嵌入式开发。其实就是对嵌入式系统的开发。</p>
+<p>详细的讲嵌入式系统是以是以应用为中心，以计算机为技术核心，面向用户，面向产品，面向应用，软硬件可裁减的，适用于对功能，可靠性，成本，体积，功耗等综合性能有严格要求的专用计算机系统。</p>
+<p>以应用为中心，说明嵌入式系统是有明确实际用途的，以计算机技术为基础，说明它其实就是一种特殊的计算机，软硬件可裁剪，说明它有很强的灵活性和可定制能力。</p>
+<p>专用计算机系统“专用”所对应的，就是“通用”。我们常用的个人PC、笔记本电脑。数据中心服务器，可以用于多种用途，就是“通用计算机系统”。 <br></p>
+<h3><span id="嵌入式可以做什么">嵌入式可以做什么？</span></h3><p>嵌入式系统的应用十分的广泛，涉及到工业生产，日常生活，工业控制，航空航天等多个领域。举例如下： <br></p>
+<p>个人通信与娱乐系统：手机，数码相机，音乐播放器，可穿戴电子产品，PSP游戏机， <br></p>
+<p>家电类产品：数字电视，扫地机器人，智能家电， <br></p>
+<p>办公自动化：打印机，复印件，传真机 <br></p>
+<p>医疗电子产品：生化分析仪，血液分析仪，CT  <br></p>
+<p>网络通信类产品：通信类交换设备，网络设备，（交换机，路由器，网络安全） <br></p>
+<p>汽车电子类产品：引擎控制，安全系统，汽车导航与娱乐系统 <br></p>
+<p>工业控制类产品：工控机，交互式终端（pos ATM）安全监控，数据采集与传输 <br></p>
+<p>军事及航天类产品：无人机，雷达，作战机器人。 <br></p>
+<p>上述这些领域，都使用了嵌入式系统。这还只是冰山一角。</p>
+<p>随着电子技术和计算机软件技术的发展，不仅在这些领域中的应用越来越深入，而且是其他传统的非信息类设备中也逐渐显现出其用武之地。</p>
+<p>可以说，嵌入式系统完完全全地包围了我们，时刻影响着我们的工作和生活。 <br></p>
+<h3><span id="嵌入式需要学习什么">嵌入式需要学习什么？</span></h3><p>明白了什么是嵌入式，那学习嵌入式需要掌握什么呢？</p>
+<p>嵌入式可以简单分为硬件和软件两个方向，做嵌入式软件对硬件一样要有一定的基础，所以就列一下成为软硬件都会的嵌入式工程师的学习路径吧。 <br></p>
+<h3><span id="一-电子设计">一 电子设计</span></h3><p>首先你要学习电路，模电，数电，认识电阻，电容，三极管，基础器件要知道，放大电路，集成运放，时讯电路基本电路能看懂，不然看电路图一定是云里雾里，也就是无法进行后续的工作，硬件产品的设计实现，包括器件选型，原理图和PCB设计，电路调试，都需要过硬的电路基础. <br></p>
+<h3><span id="二-c语言-python">二 C语言、python</span></h3><p>C语言，python是嵌入式开发中重要的编程语言，要对这门语言有深入的理解，毕竟不仅仅要写程序，看懂他人程序也很重要，最基本的数据类型，数组。指针，结构体，链表，文件操作等都要会，  <br></p>
+<h3><span id="三-单片机">三 单片机</span></h3><p>单片机入门相对简单，通过单片机的学习可以熟悉单片机的硬件结构，包括I&#x2F;o口，AD转换，通信（串口 并口I2C、CAN&#x2F;USB&#x2F;以太网，zigbee技术等）</p>
+<p>显示（LED lcd）控制（pwm等控制技术）数据处理（图形，图像、语音、视频等的处理或识别）等，学好单片机可以采用嵌入式系统尊定良好的基础。 <br></p>
+<h3><span id="四-linux">四 Linux</span></h3><p>1.Linux基础</p>
+<p>Linux操作系统的概念、安装方法、详细了解Linux下的目录结构，基本命令，编辑器VI，编译器GCC 调试器GDB和make项目管理工具，SHELL makefile脚本编写等知识，嵌入式开发环境的搭建 <br></p>
+<p>2 .Linux系统编程</p>
+<p>重点学习标准i&#x2F;o库，Linux多任务编程中的多进程和多线程，以及进程间通信（pipe FIFO消息队列，共享内存。signal 信号量）同步与互对共享资源访问控制等重要知识，主要提升对Linux应用开发的理解和代码调试的能力。 <br></p>
+<p>3、Linux网络编程</p>
+<p>计算机网络在嵌入式Linux系统应用开发过程中使用非常广泛，通过Linux网络发展，TCP&#x2F;IP协议、socket编程，tip网络编程，udp网络编程，wed编程开发等方面入手，全面了解Linux网络应用程序开发，重点学习网络编程相关api 熟练掌握TCP协议服务器的编程方法和并发服务器的实现，了解HTTIP协议及其实现方法，熟悉UDP广播。多播的原理及编程方法，掌握混合C&#x2F;s架构网络通信系统的设计，熟悉HTM，javascript等wed编程技术及实现方法。 <br></p>
+<p>4、数据结构与算法</p>
+<p>数据结构及算法在嵌入式底层驱动，通信协议，及各种引擎开发中会得到大量应用。对其掌握的好坏直接影响程序的效率，简洁及健壮性，此阶段的学习要重点理解数据结构与算法的基础内容，包括顺序表，链表，队列，栈、树、图、哈希表、各种查找排序算法等应用及其C语言实现过程。 <br></p>
+<p>5、c++.qt</p>
+<p>c++是Linux应用开发主要语言之一，本阶段重点掌握面向对象编程的基本思想以及c++的重要内容，图形界面编程是嵌入式开发中非常重要的一个环节，由于qt具有跨平台，面向对象，丰富api。支持2D&#x2F;3D渲染。支持XML。多国于等强大功能，在嵌入式领域的cui开发中得到了广泛的应用，在本阶段通过基于qt图形库的学习使学员可以熟练编写GUI程序，并移直qt应用程序到cortex-a8平台。包括ide使用，qt部件及布局管理器，信息于槽机制的应用，鼠标，键盘及绘图事件处理文件处理的应用。 <br></p>
+<p>6.Cortex A8 、Linux 平台开发</p>
+<p>通过基于ARM Cortex-A8处理s5pv210了解芯片手册的基本阅读技巧，掌握s5pv210系统资源、时钟控制器、电源管理、异常中断控制器、nand flash控制器等模块，为底层平台搭建做好准备。Linux平台包括内核裁减、内核移植、交叉编译、GNU工具使用、内核调试、Bootloader介绍、制作与原理分析、根文件系统制作以及向内核中添加自己的模块，并在s5pv210实验平台上运行自己制作的Linux系统,集成部署Linux系统整个流程。同时了解Android操作系统开发流程。Android系统是基于Linux平台的开源操作系统，该平台由操作系统、中间件、用户界面和应用软件组成，是首个为移动终端打造的真正开放和完整的移动软件，目前它的应用不再局限于移动终端，还包括数据电视、机顶盒、PDA等消费类电子产品。 <br></p>
+<p>7、驱动开发</p>
+<p>驱动程序设计是嵌入式Linux开发工作中重要的一部分，也是比较困难的一部分。本阶段的学习要熟悉Linux的内核机制、驱动程序与用户级应用程序的接口，掌握系统对设备的并发操作。熟悉所开发硬件的工作原理，具备ARM硬件接口的基础知识，熟悉ARM Cortex-A8处理器s5pv210各资源、掌握Linux设备驱动原理框架，熟悉工程中常见Linux高级字符设备、块设备、网络设备、USB设备等驱动开发，在工作中能独立胜任底层驱动开发。 <br></p>
+
+	</article>
+
+	 
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+	<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css" />
+	<div id="gitalk"></div>
+	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+	<script type="text/javascript">
+		const gitalk = new Gitalk({
+			clientID: '-id-',
+			clientSecret: '-key-',
+			id: '嵌入式介绍',
+			repo: '-issue repo name-',
+			owner: '-your github username-',
+			admin: '-your github username-',
+			title: '',
+		});
+		gitalk.render('gitalk');
+	</script>
+
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="ch1ny/ch1ny.github.io"
+      data-repo-id="R_kgDOHGgizw"
+      data-category="General"
+      data-category-id="DIC_kwDOHGgiz84CU88t"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>

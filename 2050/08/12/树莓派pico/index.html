@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html 
+	lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> 树莓派pico入门指南 -  Hexo</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+		<link
+			rel="shortcut icon"
+			href="https://gitee.com/wengerking/blog1/tree/master/blog.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+			
+				
+<link rel="stylesheet" href="/style.css">
+
+			
+				
+<link rel="stylesheet" href="/custom.css">
+
+			
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('https://s1.imagehub.cc/images/2023/08/07/blog.jpeg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="Hexo">
+        <img
+			src="https://s1.imagehub.cc/images/2023/08/12/u32436481944195944232fm253fmtautoapp138fJPEG.webp"
+			alt="John Doe"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2023/08/12/u32436481944195944232fm253fmtautoapp138fJPEG.webp" title="John Doe">
+			<img
+				src="https://s1.imagehub.cc/images/2023/08/12/u32436481944195944232fm253fmtautoapp138fJPEG.webp"
+				alt="John Doe"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>11</div>
+		<div><span>标签</span>0</div>
+		<div><span>分类</span>0</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				我的朋友
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3417498862&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+		
+			
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2024
+		<a href="/">John Doe</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="https://s1.imagehub.cc/images/2023/08/12/pico.jpeg"
+				data-sizes="auto"
+				alt="树莓派pico入门指南"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>树莓派pico入门指南</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2050年08月12日</a>
+			<a><i class="kirafont icon-edit-fill"></i>4.5k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 23 分钟</a>
+		</div>
+		<h3><span id="一pico引脚图">一.pico引脚图</span></h3><img data-fancybox="gallery" data-sizes="auto" data-src="https://z1.ax1x.com/2023/10/26/piZdmeP.png" alt="1" class="lazyload">
+
+<h3><span id="二怎样使用pico">二.怎样使用pico</span></h3><p>首先需要安装thonny，我们在这个软件上为pico编写程序 <br><br>下面视频中用到的uf2文件和软件都在这里，无需再去下载视频里的文件了<br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1LLKOPCaXz0YnRgKDdawKnQ?pwd=uyxt">https://pan.baidu.com/s/1LLKOPCaXz0YnRgKDdawKnQ?pwd=uyxt</a> </p>
+<p>下面链接中的视频提供了软件安装方法</p>
+<iframe src="//player.bilibili.com/player.html?aid=799043731&bvid=BV1Fy4y1Y7um&cid=294559600&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h3><span id="三pico点灯测试用代码">三.pico点灯(测试用代码)</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from machine import Pin <span class="comment">#从一个称为machine的库中导入了Pin这个功能，用来控制硬件设备上的引脚。</span></span><br><span class="line">import time             <span class="comment">#导入time库，包含了与时间相关的函数和方法。</span></span><br><span class="line"></span><br><span class="line">led = Pin(25, Pin.OUT) <span class="comment">#创建了一个名为led的对象，代表引脚号为25的GPIO（查看引脚图，led所在即引脚就是GP25）</span></span><br><span class="line"><span class="keyword">while</span> True:            <span class="comment">#这是一个无限循环的语句，意味着下面缩进的代码会一直重复执行，为了让程序一直运行，这是一种常见操作</span></span><br><span class="line">	led.toggle()   <span class="comment">#用于切换LED灯的状态</span></span><br><span class="line">	time.sleep(1)  <span class="comment">#延时1秒</span></span><br></pre></td></tr></table></figure>
+<p>若看到pico上的灯以一秒间隔闪烁一次，则成功</p>
+<h3><span id="四oled屏幕">四.oled屏幕</span></h3><p>oled相关资料链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1nQGsRBe6f7FK12ftu00h7w?pwd=a3b0">https://pan.baidu.com/s/1nQGsRBe6f7FK12ftu00h7w?pwd=a3b0</a> </p>
+<p>向pico导入链接里main.py和ssd1306.py两个文件，在main.py文件里运行即可。可更改main文件，得到不同的输出内容。<br>使用的是像素点为128x32的oled屏幕，而一个字符是8x8大小的，就是说最多一行输入16个字符，最多有4行，共64个字符</p>
+<p>注意：要编写字库后，才能识别汉字和图片</p>
+<p>接线方式（方向为pico–oled）：</p>
+<ol>
+<li>3v3–VCC</li>
+<li>GND–GND</li>
+<li>GP6–SDA</li>
+<li>GP7–SCK</li>
+</ol>
+<p>输出字符</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">from ssd1306 import SSD1306_I2C        <span class="comment">#导入自己的ssd1306库</span></span><br><span class="line">from machine import Pin, I2C	     <span class="comment">#导入官方PIN（引脚），iic通讯总线的库</span></span><br><span class="line">from time import <span class="built_in">sleep</span>                          <span class="comment">#导入用于延时的库</span></span><br><span class="line"></span><br><span class="line">i2c = I2C(1, scl=Pin(7), sda=Pin(6), freq=200000)#配置引脚（scl时钟线，sda数据线）和频率</span><br><span class="line">oled = SSD1306_I2C(128, 32, i2c) 		<span class="comment">#配置oled规格和通讯协议 </span></span><br><span class="line"><span class="keyword">while</span> True:  		<span class="comment">#主程序</span></span><br><span class="line">    oled.fill(0)	<span class="comment">#清空屏幕，将屏幕上所有像素点的颜色都设置成黑色（0表示黑色，1表示蓝色）</span></span><br><span class="line">    oled.text(<span class="string">&quot;Hello,World!&quot;</span>,0,0)		<span class="comment">#写入文字内容和起始像素点位置</span></span><br><span class="line">    oled.show()				<span class="comment">#oled.show()将屏幕上的内容展示出来。</span></span><br></pre></td></tr></table></figure>
+<p>输出数字</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">from ssd1306 import SSD1306_I2C</span><br><span class="line">from machine import Pin, I2C</span><br><span class="line">from time import <span class="built_in">sleep</span></span><br><span class="line"> </span><br><span class="line">i2c = I2C(1, scl=Pin(7), sda=Pin(6), freq=200000)</span><br><span class="line">oled = SSD1306_I2C(128, 32, i2c)</span><br><span class="line">a=0</span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    a+=1</span><br><span class="line">    oled.fill(0)#一定要清空屏幕，否则输出内容就糊在一起了</span><br><span class="line">    oled.text(str(a),0,0)</span><br><span class="line">    oled.show()</span><br><span class="line">    <span class="comment">#sleep(1)   #觉得加的太快，每次给1秒延时</span></span><br></pre></td></tr></table></figure>
+<p>输出图形</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">from ssd1306 import SSD1306_I2C</span><br><span class="line">from machine import Pin, I2C</span><br><span class="line">from time import <span class="built_in">sleep</span></span><br><span class="line"> </span><br><span class="line">i2c = I2C(1, scl=Pin(7), sda=Pin(6), freq=200000)</span><br><span class="line">oled = SSD1306_I2C(128, 32, i2c)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    oled.fill(0)</span><br><span class="line">    oled.pixel(20,31,1)       <span class="comment">#画点   参数（点横坐标，纵坐标，颜色）</span></span><br><span class="line">    oled.line(30, 0, 60, 30, 1) <span class="comment">#画线  参数（起点横坐标，纵坐标，终点横坐标，纵坐标，颜色）</span></span><br><span class="line">    oled.rect(0,0,10,10,1) <span class="comment">#画矩形  参数（起点横坐标，纵坐标，长，宽，颜色）</span></span><br><span class="line"></span><br><span class="line">    oled.show()</span><br></pre></td></tr></table></figure>
+<p>其他小技巧</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">oled.poweroff（）:关闭显示屏。</span><br><span class="line">oled.poweron（）: 打开显示屏。</span><br><span class="line">oled.contrast(x): 设置显示屏的对比度,参数x范围0-100，数字越大屏幕越亮</span><br><span class="line">oled.invert(x): 设置显示屏的颜色反转。参数x范围0-1,0代表黑色，1代表蓝色</span><br><span class="line">oled.scroll(x，y)： 用于移动屏幕显示内容，其中x和y分别表示x轴和y轴移动的像素数量</span><br></pre></td></tr></table></figure>
+
+<p>中文点阵生成网站： <a target="_blank" rel="noopener" href="https://www.zhetao.com/fontarray.html">https://www.zhetao.com/fontarray.html</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">from ssd1306 import SSD1306_I2C</span><br><span class="line">from machine import Pin, I2C</span><br><span class="line">from time import <span class="built_in">sleep</span></span><br><span class="line">import framebuf  <span class="comment">#导入汉字图片需要的库</span></span><br><span class="line"></span><br><span class="line">i2c = I2C(1, scl=Pin(7), sda=Pin(6), freq=200000)</span><br><span class="line">oled = SSD1306_I2C(128, 32, i2c)</span><br><span class="line"><span class="comment">#汉字二进制列表</span></span><br><span class="line">a=[ 0x08, 0x80, 0x10, 0x00, 0x08, 0x80, 0x10, 0xfc, 0x08, 0x80, 0x10, 0x04, 0x11, 0xfe, 0x10, 0x08, 0x11, 0x02, 0xfc, 0x10, 0x32, 0x04, 0x24, 0x20, 0x34, 0x20, 0x24, 0x20, 0x50, 0x20, 0x25, 0xfe, 0x91, 0x28, 0x24, 0x20, 0x11, 0x24, 0x48, 0x20, 0x12, 0x24, 0x28, 0x20, 0x12, 0x22, 0x10, 0x20, 0x14, 0x22, 0x28, 0x20, 0x10, 0x20, 0x44, 0x20, 0x10, 0xa0, 0x84, 0xa0, 0x10, 0x40, 0x00, 0x40]</span><br><span class="line"><span class="comment">#图片二进制列表</span></span><br><span class="line">b=[ 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xfb, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xf8, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xf8, 0x3f, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xf8, 0x1f, 0xff, 0xff, 0x1f, 0xff, 0xff, 0xff, 0xff, 0xff, 0xfc, 0x07, 0xff, 0xf8, 0x1f, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x07, 0x7f, 0xf0, 0x1f, 0xff, 0xff, 0xff, 0xff, 0xf1, 0xff, 0x80, 0x00, 0x00, 0x3f, 0xff, 0xff, 0xff, 0xff, 0xe0, 0x7f, 0xe0, 0x00, 0x01, 0xff, 0xff, 0xff, 0xff, 0xff, 0xc0, 0x17, 0xe0, 0x00, 0x07, 0xff, 0xff, 0xff, 0xff, 0xff, 0x80, 0x01, 0xe4, 0x00, 0x0f, 0xff, 0xff, 0xff, 0xff, 0xff, 0x00, 0x00, 0x07, 0x00, 0xcf, 0xff, 0xff, 0xff, 0xff, 0xfe, 0x00, 0x00, 0x00, 0x01, 0xcf, 0xff, 0xff, 0xff, 0xff, 0xfe, 0x00, 0x00, 0x20, 0x00, 0x8f, 0xff, 0xff, 0xff, 0xff, 0xff, 0x80, 0x00, 0x20, 0x7c, 0x0f, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x80, 0x10, 0x38, 0x0f, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xf8, 0x00, 0x00, 0x3f, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xfc, 0x00, 0x00, 0x3f, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xfe, 0x00, 0x00, 0x7f, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x80, 0x00, 0x7f, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xc0, 0x00, 0x3f, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x80, 0x00, 0x7f, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x80, 0x01, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xfe, 0x7f, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff]</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> True:  </span><br><span class="line">    oled.fill(0)</span><br><span class="line">    <span class="comment">#使用时根据点阵大小更改参数</span></span><br><span class="line">    hanzi = framebuf.FrameBuffer(bytearray(a),32,16,framebuf.MONO_HLSB)</span><br><span class="line">    oled.blit(hanzi,0,0)</span><br><span class="line">    picture = framebuf.FrameBuffer(bytearray(b),80,32,framebuf.MONO_HLSB)</span><br><span class="line">    oled.blit(picture,32,0)</span><br><span class="line">    </span><br><span class="line">    oled.show()</span><br></pre></td></tr></table></figure>
+<h3><span id="五摇杆模块adc">五.摇杆模块（ADC）</span></h3><img data-fancybox="gallery" data-sizes="auto" data-src="https://s1.imagehub.cc/images/2023/11/04/2313199728d0e6740dd5dddd16ada5e8.th.png" alt="1" class="lazyload">
+
+<p>摇杆的x轴和y轴相当于两个独立的滑动变阻器</p>
+<ol>
+<li>在静止时，摇杆位于滑动变阻器中间位置，此时阻值大约为总阻值的一半。</li>
+<li>当摇杆移动到一侧时，例如x轴向右移动或y轴向上移动，对应的滑动变阻器的阻值会逐渐减小，最终接近于0欧姆。</li>
+<li>而当摇杆移动到另一侧时，例如x轴向左移动或y轴向下移动，对应的滑动变阻器的阻值会逐渐增大，最终达到阻值的最大值。<br>这种阻值的变化导致了模拟信号的分压情况也不同，通过将摇杆输出信号连接到模数转换器（ADC）输入引脚上，单片机可以将模拟信号转换为数字信号进行处理。<br>因此，在程序设计中，我们可以根据ADC转换后的数字信号值来判断摇杆的具体位置，进而实现相应的功能。</li>
+</ol>
+<p>接线方式<br>   摇杆  —–     pico</p>
+<ol>
+<li>GND   —–     GND</li>
+<li>5v     —–     GP10</li>
+<li>VRX   —–     GP26</li>
+<li>VRY   —–     GP27</li>
+<li>SW    —–     GP28</li>
+</ol>
+<p>注：5v接在GP10上，是因为直接接单片机VBUS（5v），摇杆adc读出来的值不对，你们可以试一下，我也不知道为什么，我测试过3.3v供电，数据才符合，而板子上3.3v用了一个了，这里用gpio输出高电平，也就是3.3v了<br>但是要先这样声明一下，gpio才会输出高电平</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">handle = Pin(10,Pin.OUT) <span class="comment">#handle只是变量名，可以根据设备名称更改</span></span><br><span class="line">handle.value(1) <span class="comment">#设置引脚为GP10，输出模式，输出高电平</span></span><br></pre></td></tr></table></figure>
+
+<p>adc读取摇杆的值</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">from machine import Pin,ADC  <span class="comment">#导入PIN，ADC库</span></span><br><span class="line">from time import <span class="built_in">sleep</span></span><br><span class="line"></span><br><span class="line">handle = Pin(10,Pin.OUT) </span><br><span class="line">handle.value(1) <span class="comment">#设置引脚为GP10，输出模式，输出高电平</span></span><br><span class="line"> </span><br><span class="line">x = ADC(Pin(26,Pin.OUT))   <span class="comment">#分配引脚</span></span><br><span class="line">y = ADC(Pin(27,Pin.OUT))</span><br><span class="line">z = Pin(28,Pin.IN,Pin.PULL_UP)</span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    x_value = x.read_u16()</span><br><span class="line">    y_value = y.read_u16()</span><br><span class="line">    z_value = z.value()</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;X = &#123;0:d&#125; \t\t   Y = &#123;1:d&#125;\t\t&quot;</span>.format(x_value,y_value),end=f<span class="string">&quot;z:&#123;z_value&#125;&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>()</span><br><span class="line">    <span class="built_in">sleep</span>(1)   </span><br></pre></td></tr></table></figure>
+
+<p>判断摇杆的方向</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">from machine import ADC,Pin</span><br><span class="line">from time import <span class="built_in">sleep</span></span><br><span class="line"> </span><br><span class="line">handle = Pin(10,Pin.OUT) </span><br><span class="line">handle.value(1) <span class="comment">#设置引脚为GP10，输出模式，输出高电平</span></span><br><span class="line"></span><br><span class="line">X = ADC(Pin(26,Pin.OUT))</span><br><span class="line">Y = ADC(Pin(27,Pin.OUT))</span><br><span class="line">Z = Pin(28,Pin.IN,Pin.PULL_UP)</span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    X_value = X.read_u16()</span><br><span class="line">    Y_value = Y.read_u16()</span><br><span class="line">    Z_value = Z.value()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> X_value &lt;= 600:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;X: &quot;</span>+<span class="string">&quot;  Left  &quot;</span>,end=<span class="string">&quot;  &quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> X_value &gt;=60000:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;X: &quot;</span>+<span class="string">&quot;  Right  &quot;</span>,end=<span class="string">&quot;  &quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> 600&lt;X_value&lt;60000:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;X: &quot;</span>+<span class="string">&quot;  Middle  &quot;</span>,end=<span class="string">&quot;  &quot;</span>)</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">if</span> Y_value &lt;= 600:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Y: &quot;</span>+<span class="string">&quot;  Up  &quot;</span>,end=<span class="string">&quot;  &quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> Y_value &gt;= 60000:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Y: &quot;</span>+<span class="string">&quot;  Down  &quot;</span>,end=<span class="string">&quot;  &quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> 600&lt;Y_value&lt;60000:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Y: &quot;</span>+<span class="string">&quot;  Middle  &quot;</span>,end=<span class="string">&quot;  &quot;</span>)</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">if</span> Z_value == 0:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Z: &quot;</span>+<span class="string">&quot;  low  &quot;</span>,end=<span class="string">&quot;  &quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Z: &quot;</span>+<span class="string">&quot;  high  &quot;</span>,end=<span class="string">&quot;  &quot;</span>)  </span><br><span class="line">    <span class="built_in">print</span>()</span><br><span class="line">    <span class="built_in">sleep</span>(1)</span><br></pre></td></tr></table></figure>
+
+<h3><span id="六蜂鸣器">六.蜂鸣器</span></h3><p>理论基础请看下面的视频11-1节</p>
+<iframe src="//player.bilibili.com/player.html?aid=45937890&bvid=BV1Mb411e7re&cid=134533326&p=25" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> <br>
+
+<p>接线方式<br>   蜂鸣器  —–     pico</p>
+<ol>
+<li>“-”    —–     GND</li>
+<li>“+”    —–     GP20</li>
+</ol>
+<p>演奏音乐示例代码<br>若只简单应用，只需修改歌曲内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">import machine</span><br><span class="line">import urandom</span><br><span class="line">import utime</span><br><span class="line"><span class="comment"># 初始化蜂鸣器对象，设置引脚为20号引脚，输出模式</span></span><br><span class="line">buzzer = machine.PWM(machine.Pin(20, machine.Pin.OUT))</span><br><span class="line"></span><br><span class="line"><span class="comment">#各音调对应频率</span></span><br><span class="line">tones = &#123;</span><br><span class="line">    <span class="string">&quot;B0&quot;</span>: 31,   </span><br><span class="line">    <span class="string">&quot;C1&quot;</span>: 33, <span class="string">&quot;CS1&quot;</span>: 35, <span class="string">&quot;D1&quot;</span>: 37, <span class="string">&quot;DS1&quot;</span>: 39,  <span class="string">&quot;E1&quot;</span>: 41, <span class="string">&quot;F1&quot;</span>: 44,</span><br><span class="line">    <span class="string">&quot;FS1&quot;</span>: 46, <span class="string">&quot;G1&quot;</span>: 49, <span class="string">&quot;GS1&quot;</span>: 52, <span class="string">&quot;A1&quot;</span>: 55, <span class="string">&quot;AS1&quot;</span>: 58, <span class="string">&quot;B1&quot;</span>: 62,  </span><br><span class="line">    <span class="string">&quot;C2&quot;</span>: 65, <span class="string">&quot;CS2&quot;</span>: 69, <span class="string">&quot;D2&quot;</span>: 73, <span class="string">&quot;DS2&quot;</span>: 78, <span class="string">&quot;E2&quot;</span>: 82, <span class="string">&quot;F2&quot;</span>: 87,</span><br><span class="line">    <span class="string">&quot;FS2&quot;</span>: 93, <span class="string">&quot;G2&quot;</span>: 98, <span class="string">&quot;GS2&quot;</span>: 104, <span class="string">&quot;A2&quot;</span>: 110, <span class="string">&quot;AS2&quot;</span>: 117, <span class="string">&quot;B2&quot;</span>: 123, </span><br><span class="line">    <span class="string">&quot;C3&quot;</span>: 131, <span class="string">&quot;CS3&quot;</span>: 139, <span class="string">&quot;D3&quot;</span>: 147, <span class="string">&quot;DS3&quot;</span>: 156, <span class="string">&quot;E3&quot;</span>: 165, <span class="string">&quot;F3&quot;</span>: 175,</span><br><span class="line">    <span class="string">&quot;FS3&quot;</span>: 185, <span class="string">&quot;G3&quot;</span>: 196, <span class="string">&quot;GS3&quot;</span>: 208, <span class="string">&quot;A3&quot;</span>: 220,  <span class="string">&quot;AS3&quot;</span>: 233, <span class="string">&quot;B3&quot;</span>: 247,</span><br><span class="line">    <span class="string">&quot;C4&quot;</span>: 262, <span class="string">&quot;CS4&quot;</span>: 277, <span class="string">&quot;D4&quot;</span>: 294, <span class="string">&quot;DS4&quot;</span>: 311, <span class="string">&quot;E4&quot;</span>: 330, <span class="string">&quot;F4&quot;</span>: 349,</span><br><span class="line">    <span class="string">&quot;FS4&quot;</span>: 370, <span class="string">&quot;G4&quot;</span>: 392, <span class="string">&quot;GS4&quot;</span>: 415, <span class="string">&quot;A4&quot;</span>: 440, <span class="string">&quot;AS4&quot;</span>: 466, <span class="string">&quot;B4&quot;</span>: 494,</span><br><span class="line">    <span class="string">&quot;C5&quot;</span>: 523, <span class="string">&quot;CS5&quot;</span>: 554, <span class="string">&quot;D5&quot;</span>: 587, <span class="string">&quot;DS5&quot;</span>: 622, <span class="string">&quot;E5&quot;</span>: 659, <span class="string">&quot;F5&quot;</span>: 698,</span><br><span class="line">    <span class="string">&quot;FS5&quot;</span>: 740, <span class="string">&quot;G5&quot;</span>: 784, <span class="string">&quot;GS5&quot;</span>: 831, <span class="string">&quot;A5&quot;</span>: 880, <span class="string">&quot;AS5&quot;</span>: 932, <span class="string">&quot;B5&quot;</span>: 988,</span><br><span class="line">    <span class="string">&quot;C6&quot;</span>: 1047, <span class="string">&quot;CS6&quot;</span>: 1109, <span class="string">&quot;D6&quot;</span>: 1175, <span class="string">&quot;DS6&quot;</span>: 1245, <span class="string">&quot;E6&quot;</span>: 1319, <span class="string">&quot;F6&quot;</span>: 1397,</span><br><span class="line">    <span class="string">&quot;FS6&quot;</span>: 1480, <span class="string">&quot;G6&quot;</span>: 1568, <span class="string">&quot;GS6&quot;</span>: 1661, <span class="string">&quot;A6&quot;</span>: 1760, <span class="string">&quot;AS6&quot;</span>: 1865, <span class="string">&quot;B6&quot;</span>: 1976,</span><br><span class="line">    <span class="string">&quot;C7&quot;</span>: 2093, <span class="string">&quot;CS7&quot;</span>: 2217, <span class="string">&quot;D7&quot;</span>: 2349, <span class="string">&quot;DS7&quot;</span>: 2489, <span class="string">&quot;E7&quot;</span>: 2637, <span class="string">&quot;F7&quot;</span>: 2794,</span><br><span class="line">    <span class="string">&quot;FS7&quot;</span>: 2960, <span class="string">&quot;G7&quot;</span>: 3136, <span class="string">&quot;GS7&quot;</span>: 3322, <span class="string">&quot;A7&quot;</span>: 3520, <span class="string">&quot;AS7&quot;</span>: 3729, <span class="string">&quot;B7&quot;</span>: 3951,</span><br><span class="line">    <span class="string">&quot;C8&quot;</span>: 4186, <span class="string">&quot;CS8&quot;</span>: 4435, <span class="string">&quot;D8&quot;</span>: 4699, <span class="string">&quot;DS8&quot;</span>: 4978</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">def playtone(frequency):  <span class="comment"># 播放特定频率的音调</span></span><br><span class="line">    buzzer.duty_u16(1000)  <span class="comment"># 设置脉宽调制的占空比</span></span><br><span class="line">    buzzer.freq(frequency)  <span class="comment"># 设置频率</span></span><br><span class="line"></span><br><span class="line">def bequiet():   <span class="comment"># 停止播放</span></span><br><span class="line">    buzzer.duty_u16(0)</span><br><span class="line">    </span><br><span class="line">def playsong(mysong):   <span class="comment"># 播放音乐</span></span><br><span class="line">    <span class="keyword">for</span> s <span class="keyword">in</span> mysong:</span><br><span class="line">        <span class="keyword">if</span> (s == <span class="string">&quot;P&quot;</span>):  <span class="comment"># 如果是“P”，表示休止符</span></span><br><span class="line">            bequiet()   <span class="comment"># 停止播放</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            playtone(tones[s])  <span class="comment"># 播放对应频率的音调</span></span><br><span class="line">        utime.sleep(0.25)  <span class="comment"># 播放间隔</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#我还想她——林俊杰（#根据音谱修改，创作歌曲吧）</span></span><br><span class="line">song = [</span><br><span class="line">    <span class="string">&quot;B5&quot;</span>,<span class="string">&quot;B5&quot;</span>,<span class="string">&quot;A5&quot;</span>,<span class="string">&quot;A5&quot;</span>,<span class="string">&quot;A5&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;B5&quot;</span>,<span class="string">&quot;B5&quot;</span>,<span class="string">&quot;A5&quot;</span>,<span class="string">&quot;A5&quot;</span>,<span class="string">&quot;A5&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;C6&quot;</span>,</span><br><span class="line">    <span class="string">&quot;B5&quot;</span>,<span class="string">&quot;B5&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,</span><br><span class="line">    <span class="string">&quot;B5&quot;</span>,<span class="string">&quot;B5&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;B5&quot;</span>,<span class="string">&quot;B5&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;D6&quot;</span>,</span><br><span class="line">    <span class="string">&quot;B5&quot;</span>,<span class="string">&quot;B5&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;D6&quot;</span>,</span><br><span class="line">    <span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;D6&quot;</span>,</span><br><span class="line">    <span class="string">&quot;G6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;F6&quot;</span>,</span><br><span class="line">    <span class="string">&quot;G6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;A6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,</span><br><span class="line">    <span class="string">&quot;B5&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;B5&quot;</span>,<span class="string">&quot;B5&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;D6&quot;</span>,</span><br><span class="line">    <span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;G6&quot;</span>,</span><br><span class="line">    <span class="string">&quot;G6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;E6&quot;</span>,</span><br><span class="line">    <span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;A5&quot;</span>,</span><br><span class="line">    <span class="string">&quot;A5&quot;</span>,<span class="string">&quot;A5&quot;</span>,<span class="string">&quot;A6&quot;</span>,<span class="string">&quot;A6&quot;</span>,<span class="string">&quot;A6&quot;</span>,<span class="string">&quot;A6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,</span><br><span class="line">    <span class="string">&quot;F6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;A5&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;G6&quot;</span>,</span><br><span class="line">    <span class="string">&quot;G6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;A6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,</span><br><span class="line">    <span class="string">&quot;D6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;B6&quot;</span>,<span class="string">&quot;B6&quot;</span>,<span class="string">&quot;A6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;C6&quot;</span>,</span><br><span class="line">    <span class="string">&quot;A5&quot;</span>,<span class="string">&quot;A5&quot;</span>,<span class="string">&quot;A6&quot;</span>,<span class="string">&quot;A6&quot;</span>,<span class="string">&quot;A6&quot;</span>,<span class="string">&quot;A6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;F6&quot;</span>,</span><br><span class="line">    <span class="string">&quot;F6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;F6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;A5&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;B5&quot;</span>,<span class="string">&quot;D6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,<span class="string">&quot;C6&quot;</span>,    </span><br><span class="line">    <span class="string">&quot;E6&quot;</span>,<span class="string">&quot;A6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;A6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;G6&quot;</span>,<span class="string">&quot;E6&quot;</span>,<span class="string">&quot;A6&quot;</span>,<span class="string">&quot;G6&quot;</span></span><br><span class="line">]</span><br><span class="line">playsong(song)  <span class="comment"># 播放音乐</span></span><br><span class="line">bequiet()  <span class="comment"># 停止播放</span></span><br></pre></td></tr></table></figure>
+
+<h3><span id="七pwm">七.PWM</span></h3><ol>
+<li><p>呼吸灯</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line">from machine import Pin, PWM</span><br><span class="line"></span><br><span class="line">pwm = PWM(Pin(25)) <span class="comment">#把板载led灯的GPIO配置为PWM模式（可以更改为其他引脚，将自己的led灯接在设置的引脚上）</span></span><br><span class="line">pwm.freq(10000)   <span class="comment"># 设置PWM频率为10kHz</span></span><br><span class="line">duty = 0    <span class="comment"># 初始化PWM值和方向</span></span><br><span class="line">direction = 1</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    <span class="comment"># 根据方向增减值</span></span><br><span class="line">    duty += direction</span><br><span class="line">    <span class="comment"># 如果值大于65535，则将值设置为最大值，并改变方向为递减</span></span><br><span class="line">    <span class="keyword">if</span> duty &gt; 65535:</span><br><span class="line">        duty = 65535</span><br><span class="line">        direction = -1</span><br><span class="line">    <span class="comment"># 如果值小于0，则将值设置为0，并改变方向为递增</span></span><br><span class="line">    <span class="keyword">elif</span> duty &lt; 0:</span><br><span class="line">        duty = 0</span><br><span class="line">        direction = 1</span><br><span class="line">    <span class="comment"># 设置PWM的值</span></span><br><span class="line">    pwm.duty_u16(duty)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>PWM舵机<br>接线方式：舵机——pico<br>  红色线      3.3v<br>  棕色线      GND<br>  橙色线       GP5</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line">from machine import Pin, PWM</span><br><span class="line"></span><br><span class="line">pwm = PWM(Pin(5))</span><br><span class="line">pwm.freq(10000)   <span class="comment"># 设置PWM频率为10kHz</span></span><br><span class="line">duty = 0    <span class="comment"># 初始化值和方向</span></span><br><span class="line">direction = 1</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    <span class="comment"># 根据方向增减值</span></span><br><span class="line">    duty += direction</span><br><span class="line">    <span class="comment"># 如果值大于65535，则将值设置为最大值，并改变方向为递减</span></span><br><span class="line">    <span class="keyword">if</span> duty &gt; 65535:</span><br><span class="line">        duty = 65535</span><br><span class="line">        direction = -1</span><br><span class="line">    <span class="comment"># 如果值小于0，则将值设置为0，并改变方向为递增</span></span><br><span class="line">    <span class="keyword">elif</span> duty &lt; 0:</span><br><span class="line">        duty = 0</span><br><span class="line">        direction = 1</span><br><span class="line">    <span class="comment"># 设置PWM的值</span></span><br><span class="line">    pwm.duty_u16(duty)</span><br></pre></td></tr></table></figure>
+
+<h3><span id="八中断">八.中断</span></h3><p>接线方式：<br>led灯长脚接GP11 ，短脚接GND<br>摇杆按键SW接GP12，5v接3.3v，GND接GND</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import machine</span><br><span class="line">import utime</span><br><span class="line"></span><br><span class="line">led = machine.Pin(11, machine.Pin.OUT)</span><br><span class="line">led.value(0)</span><br><span class="line">button = machine.Pin(12, machine.Pin.IN, machine.Pin.PULL_UP)</span><br><span class="line"> </span><br><span class="line"><span class="comment">#中断函数 </span></span><br><span class="line">def int_handler(pin):</span><br><span class="line">    button.irq(handler=None)  <span class="comment">#暂时禁用中断处理函数，防止重复触发</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Interrupt Detected!&quot;</span>)</span><br><span class="line">    led.value(1)</span><br><span class="line">    utime.sleep(2)</span><br><span class="line">    button.irq(handler=int_handler)#恢复中断处理函数，以便下一次中断触发时继续执行处理函数</span><br><span class="line"> </span><br><span class="line">button.irq(trigger=machine.Pin.IRQ_RISING, handler=int_handler) <span class="comment">#handler后接入中断函数</span></span><br><span class="line"><span class="comment">#trigger 配置可以触发中断的事件。可能的值是：</span></span><br><span class="line"><span class="comment">#Pin.IRQ_FALLING 下降沿中断</span></span><br><span class="line"><span class="comment">#Pin.IRQ_RISING 上升沿中断</span></span><br><span class="line"><span class="comment">#Pin.IRQ_RISING_FALLING 上升沿或下降沿中断</span></span><br><span class="line"><span class="comment">#Pin.IRQ_LOW_LEVEL 低电平中断</span></span><br><span class="line"><span class="comment">#Pin.IRQ_HIGH_LEVEL 高电平中断</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">     led.toggle()</span><br><span class="line">     utime.sleep(2)</span><br></pre></td></tr></table></figure>
+<h3><span id="九定时器">九.定时器</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">from machine import Pin, Timer</span><br><span class="line">import utime</span><br><span class="line">led_pin = Pin(25, Pin.OUT)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义定时器回调函数，用于切换LED状态</span></span><br><span class="line">def toggle_led(timer):</span><br><span class="line">    led_pin.toggle()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建定时器对象</span></span><br><span class="line">timer = Timer()</span><br><span class="line"><span class="comment"># 初始化定时器，设置频率为5Hz（每秒5次），模式为周期性触发，并指定回调函数</span></span><br><span class="line">timer.init(freq=5, mode=Timer.PERIODIC, callback=toggle_led)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    pass  <span class="comment">#跳过，什么也不做</span></span><br></pre></td></tr></table></figure>
+
+<h3><span id="十串口通信">十.串口通信</span></h3><p>先从以下链接中下载串口软件<br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1VXN6w_Nuc2TFNZ1zu3zozA?pwd=8t1v">https://pan.baidu.com/s/1VXN6w_Nuc2TFNZ1zu3zozA?pwd=8t1v</a><br>接线方式： 串口模块 —— pico<br>      5v——VBUS<br>      GND——GND<br>      TX——GP1（通信双方都是TX和RX交叉连接哦）<br>      RX——GP0</p>
+<p>打开串口软件，选择对应串口和波特率，点击开启串口的选项。<br>在下面输入框按照通信协议输入，点击发送，即可完成电脑向单片机通信。</p>
+<img data-fancybox="gallery" data-sizes="auto" data-src="https://s1.imagehub.cc/images/2023/11/25/df1be093371a35082ee8086212db02e8.md.png" alt="1" class="lazyload">
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">from machine import Pin, UART</span><br><span class="line">import time</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化串口，设置波特率和引脚</span></span><br><span class="line">uart = UART(0, baudrate=115200, tx=Pin(0), rx=Pin(1))</span><br><span class="line">led = machine.Pin(25, machine.Pin.OUT)  </span><br><span class="line"></span><br><span class="line">uart.write(<span class="string">&quot;UART TEST\r\n&quot;</span>)  <span class="comment"># 单片机通过串口向电脑发送测试信息</span></span><br><span class="line"><span class="comment"># 在电脑串口工具输入1则打开LED,0关闭LED</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    <span class="keyword">if</span> uart.any() != False:  <span class="comment"># 如果串口接收到正常数据</span></span><br><span class="line">        buf = uart.read(1)  <span class="comment"># 读取一个字节的数据（参数代表读取字节个数）</span></span><br><span class="line">        <span class="keyword">if</span> buf == b<span class="string">&#x27;1&#x27;</span>:   <span class="comment">#b 表示字节串的前缀</span></span><br><span class="line">            led.on() </span><br><span class="line">            uart.write(<span class="string">&quot;LED ON \r\n&quot;</span>)  <span class="comment"># 发送串口信息，表示LED已打开 \r\n&quot; 表示回车符和换行符</span></span><br><span class="line">        <span class="keyword">elif</span> buf == b<span class="string">&#x27;0&#x27;</span>:</span><br><span class="line">            led.off()  </span><br><span class="line">            uart.write(<span class="string">&quot;LED OFF \r\n&quot;</span>)  <span class="comment"># 发送串口信息，表示LED已关闭</span></span><br></pre></td></tr></table></figure>
+
+<h3><span id="十一pio">十一.PIO</span></h3><p>介绍一个PIO点灯的程序，效率比普通的点灯程序高很多，通过使用单片机上硬件资源，减轻单片机CPU的负荷。<br>除此之外，PIO可以模拟IIC或VGA等很多单片机上可能没有的通信协议端口，给了开发者非常高的开发自由度，请根据PICO数据手册自行学习</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">from rp2 import PIO, StateMachine, asm_pio</span><br><span class="line">from machine import Pin</span><br><span class="line">import time</span><br><span class="line"></span><br><span class="line">@asm_pio(set_init=PIO.OUT_LOW)#@为描述符，它告诉MicroPython将代码视为PIO程序</span><br><span class="line">def led_quarter_brightness():</span><br><span class="line"> <span class="built_in">set</span>(pins, 0) [31]#一条指令占一个周期，[a]表示延时a个周期</span><br><span class="line"> <span class="built_in">set</span>(pins, 1)</span><br><span class="line">sm1 = StateMachine(1, led_quarter_brightness, freq=10000, set_base=Pin(25))#配置状态机</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(True): </span><br><span class="line"> sm1.active(1)#启动状态机</span><br><span class="line"> time.sleep(1)</span><br><span class="line"> sm1.active(0)#关闭状态机</span><br></pre></td></tr></table></figure>
+
+<h3><span id="十二自学教程推荐">十二.自学教程推荐</span></h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/slofslb/category_11328828.html?spm=1001.2014.3001.5482">https://blog.csdn.net/slofslb/category_11328828.html?spm=1001.2014.3001.5482</a></p>
+
+	</article>
+
+	 
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+	<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css" />
+	<div id="gitalk"></div>
+	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+	<script type="text/javascript">
+		const gitalk = new Gitalk({
+			clientID: '-id-',
+			clientSecret: '-key-',
+			id: '树莓派pico入门指南',
+			repo: '-issue repo name-',
+			owner: '-your github username-',
+			admin: '-your github username-',
+			title: '',
+		});
+		gitalk.render('gitalk');
+	</script>
+
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="ch1ny/ch1ny.github.io"
+      data-repo-id="R_kgDOHGgizw"
+      data-category="General"
+      data-category-id="DIC_kwDOHGgiz84CU88t"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>
