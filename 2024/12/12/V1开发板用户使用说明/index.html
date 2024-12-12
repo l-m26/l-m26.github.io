@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html 
+	lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> V1开发板简介 -  光创实验室</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+		<link
+			rel="shortcut icon"
+			href="https://gitee.com/wengerking/blog1/tree/master/blog.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+			
+				
+<link rel="stylesheet" href="/style.css">
+
+			
+				
+<link rel="stylesheet" href="/custom.css">
+
+			
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('https://s1.imagehub.cc/images/2023/08/07/blog.jpeg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="光创实验室">
+        <img
+			src="https://s1.imagehub.cc/images/2023/08/12/u32436481944195944232fm253fmtautoapp138fJPEG.webp"
+			alt="John Doe"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2023/08/12/u32436481944195944232fm253fmtautoapp138fJPEG.webp" title="John Doe">
+			<img
+				src="https://s1.imagehub.cc/images/2023/08/12/u32436481944195944232fm253fmtautoapp138fJPEG.webp"
+				alt="John Doe"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>14</div>
+		<div><span>标签</span>0</div>
+		<div><span>分类</span>5</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				我的朋友
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3417498862&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/C-C/">
+              C/C++
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/python/">
+              python
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/光创开发板V1/">
+              光创开发板V1
+            </a>
+            <span class="category-list-count">3</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/小知识/">
+              小知识
+            </a>
+            <span class="category-list-count">4</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/嵌入式/">
+              嵌入式
+            </a>
+            <span class="category-list-count">4</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2024
+		<a href="/">John Doe</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="https://s21.ax1x.com/2024/12/12/pAbe5i6.jpg"
+				data-sizes="auto"
+				alt="V1开发板简介"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>V1开发板简介</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2024年12月12日</a>
+			<a><i class="kirafont icon-edit-fill"></i>609 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 2 分钟</a>
+		</div>
+		<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pAbGC4J"><img data-fancybox="gallery" data-sizes="auto" data-src="https://s21.ax1x.com/2024/12/12/pAbGC4J.png" alt="pAbGC4J.png" class="lazyload"></a></p>
+<h1><span id="用户使用说明">用户使用说明</span></h1><p>MCU简介: STM32F407VET6, 内核:ARM 32位的Cortex-M4, 最高 168MHz 工作频率</p>
+<h2><span id="一-供电">一、供电</span></h2><p>1、主电源：使用2\3S电池插入DC头供电（不能超过15V供电）<br>2、副电源：使用type-c线插入下载口，注意仅插入副电源时不能用于驱动电机<br>3、主副电源具有电源管理功能，可同时接入，同时接入时副电源会自动断开</p>
+<h2><span id="二-stlink-v21">二、STLINK V2,1</span></h2><p>板载stlink v2.1，集成了用户闪存下载和串口调试功能，一根type-c线即可完成下载、调试、供电（副电源）</p>
+<h2><span id="三-编码器电机">三、编码器电机</span></h2><p>1、使用TB6612电机驱动芯片，电源电压VM &#x3D; 15V（最大值），输出电流：IOUT &#x3D; 1.2A（平均）&#x2F; 3.2A（峰值），内置过热关断电路和低电压检测电路，可以选择以下四种模式之一：顺时针（CW）、逆时针（CCW）、短刹车（short brake）和停止模式（stop mode）<br>2、接口已接编码器A相和B相，可直接接插直流编码器电机驱动</p>
+<h2><span id="四-can收发器">四、	CAN收发器</span></h2><p>使用TJA1050T高速CAN收发芯片，将主控的串口T&#x2F;RX转换为CAN协议的H和L线，阻抗走120Ω</p>
+<h2><span id="五-串口屏">五、串口屏</span></h2><p>适配陶晶驰触摸屏接口，使用串口屏可方便高效开发设计屏幕界面</p>
+<h2><span id="六-eeprom">六、EEPROM</span></h2><p>板载2-Kbit (256 x 8)容量EEPROM芯片AT24C02C，若后期容量不足可PIN-PIN替换2M容量的M24M02-DRMN6TP芯片，用于惯性导航等开发</p>
+<h2><span id="七-陀螺仪">七、陀螺仪</span></h2><p>板载BMI270陀螺仪，性能远超MPU6050，可用于惯导开发，读地址时应该为0X24，走SPI通信协议</p>
+<h2><span id="八-usb转ttl">八、USB转TTL</span></h2><p>板载CP2102芯片，可通过type-c接收来自XX派摄像头传来的数据，最高传输速度2.1M，远胜CH340</p>
+<h2><span id="九-舵机">九、舵机</span></h2><p>一路舵机接口，电源为5V 4A，可直接接插舵机接口（应尽量避免舵机堵转）</p>
+<h2><span id="十-蓝牙">十、蓝牙</span></h2><p>适配市面上大部分4&#x2F;6P接口的蓝牙，接插排母即可使用</p>
+<h2><span id="十一-无源蜂鸣器">十一、无源蜂鸣器</span></h2><p>可以满足不同的声音音调需求，比如检测不同物体时发出不同声音</p>
+<h2><span id="十二-用户led-按键-io口">十二、用户LED、按键、I\O口</span></h2><p>两个LED灯、四个按键、引出全部的剩余I\O口，输出5V 4A和3.3V 500Ma，电子负载测功率如图<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pAbJsWd"><img data-fancybox="gallery" data-sizes="auto" data-src="https://s21.ax1x.com/2024/12/12/pAbJsWd.png" alt="pAbJsWd.png" class="lazyload"></a></p>
+<h2><span id="十三-信号线">十三、信号线</span></h2><p>所有串口、CAN、SPI、IIC信号线均已等长处理，线宽均为7mil</p>
+
+	</article>
+
+	 
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			                  
+			<!-- 先找到与当前文字相同的目录 -->
+			   
+			<!-- 在找到当前文章所在的 index -->
+			       
+			<!-- 下一篇文章 -->
+			<div class="new">
+				<span>下一章</span>
+				<a href="/2024/12/12/V1%E5%BC%80%E5%8F%91%E6%9D%BF%E7%94%B5%E8%B7%AF%E5%9B%BE/"> V1开发板电路图</a>
+			</div>
+			                 
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+			<a class="kirafont icon-container-fill -link" href="/categories/%E5%85%89%E5%88%9B%E5%BC%80%E5%8F%91%E6%9D%BFV1/">光创开发板V1</a>
+		
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+	<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css" />
+	<div id="gitalk"></div>
+	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+	<script type="text/javascript">
+		const gitalk = new Gitalk({
+			clientID: '-id-',
+			clientSecret: '-key-',
+			id: 'V1开发板简介',
+			repo: '-issue repo name-',
+			owner: '-your github username-',
+			admin: '-your github username-',
+			title: '',
+		});
+		gitalk.render('gitalk');
+	</script>
+
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="ch1ny/ch1ny.github.io"
+      data-repo-id="R_kgDOHGgizw"
+      data-category="General"
+      data-category-id="DIC_kwDOHGgiz84CU88t"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>

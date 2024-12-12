@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html 
+	lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> V1开发板代码 -  光创实验室</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+		<link
+			rel="shortcut icon"
+			href="https://gitee.com/wengerking/blog1/tree/master/blog.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+			
+				
+<link rel="stylesheet" href="/style.css">
+
+			
+				
+<link rel="stylesheet" href="/custom.css">
+
+			
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('https://s1.imagehub.cc/images/2023/08/07/blog.jpeg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="光创实验室">
+        <img
+			src="https://s1.imagehub.cc/images/2023/08/12/u32436481944195944232fm253fmtautoapp138fJPEG.webp"
+			alt="John Doe"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2023/08/12/u32436481944195944232fm253fmtautoapp138fJPEG.webp" title="John Doe">
+			<img
+				src="https://s1.imagehub.cc/images/2023/08/12/u32436481944195944232fm253fmtautoapp138fJPEG.webp"
+				alt="John Doe"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>14</div>
+		<div><span>标签</span>0</div>
+		<div><span>分类</span>5</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				我的朋友
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3417498862&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/C-C/">
+              C/C++
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/python/">
+              python
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/光创开发板V1/">
+              光创开发板V1
+            </a>
+            <span class="category-list-count">3</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/小知识/">
+              小知识
+            </a>
+            <span class="category-list-count">4</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/嵌入式/">
+              嵌入式
+            </a>
+            <span class="category-list-count">4</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2024
+		<a href="/">John Doe</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="https://s21.ax1x.com/2024/12/12/pAbe5i6.jpg"
+				data-sizes="auto"
+				alt="V1开发板代码"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>V1开发板代码</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2024年12月12日</a>
+			<a><i class="kirafont icon-edit-fill"></i>2.2k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 12 分钟</a>
+		</div>
+		<h3><span id="全部代码及配置">全部代码及配置</span></h3><p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1X6cUm1QEBtlr73CW-Bla2g?pwd=yn6g">https://pan.baidu.com/s/1X6cUm1QEBtlr73CW-Bla2g?pwd=yn6g</a></p>
+<p>提取码：yn6g</p>
+<h2><span id="at24c02">AT24C02</span></h2><h3><span id="at24c02c">AT24C02.c</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &quot;AT24C02.h&quot;</span></span><br><span class="line"></span><br><span class="line">extern I2C_HandleTypeDef hi2c3;</span><br><span class="line"></span><br><span class="line"><span class="comment">#define I2C_Handle hi2c3</span></span><br><span class="line"></span><br><span class="line">void I2C_EE_BufferWrite(uint8_t* pBuffer, uint8_t WriteAddr, uint16_t NumByteToWrite)</span><br><span class="line">&#123;</span><br><span class="line">  uint8_t NumOfPage = 0, NumOfSingle = 0, Addr = 0, count = 0;</span><br><span class="line"></span><br><span class="line">  Addr = WriteAddr % EEPROM_PAGESIZE;</span><br><span class="line">  count = EEPROM_PAGESIZE - Addr;</span><br><span class="line">  NumOfPage =  NumByteToWrite / EEPROM_PAGESIZE;</span><br><span class="line">  NumOfSingle = NumByteToWrite % EEPROM_PAGESIZE;</span><br><span class="line"> </span><br><span class="line">  /* If WriteAddr is I2C_PageSize aligned  */</span><br><span class="line">  <span class="keyword">if</span>(Addr == 0) </span><br><span class="line">  &#123;</span><br><span class="line">    /* If NumByteToWrite &lt; I2C_PageSize */</span><br><span class="line">    <span class="keyword">if</span>(NumOfPage == 0) </span><br><span class="line">    &#123;</span><br><span class="line">      I2C_EE_PageWrite(pBuffer, WriteAddr, NumOfSingle);</span><br><span class="line">    &#125;</span><br><span class="line">    /* If NumByteToWrite &gt; I2C_PageSize */</span><br><span class="line">    <span class="keyword">else</span>  </span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">while</span>(NumOfPage--)</span><br><span class="line">      &#123;</span><br><span class="line">        I2C_EE_PageWrite(pBuffer, WriteAddr, EEPROM_PAGESIZE); </span><br><span class="line">        WriteAddr +=  EEPROM_PAGESIZE;</span><br><span class="line">        pBuffer += EEPROM_PAGESIZE;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span>(NumOfSingle!=0)</span><br><span class="line">      &#123;</span><br><span class="line">        I2C_EE_PageWrite(pBuffer, WriteAddr, NumOfSingle);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  /* If WriteAddr is not I2C_PageSize aligned  */</span><br><span class="line">  <span class="keyword">else</span> </span><br><span class="line">  &#123;</span><br><span class="line">    /* If NumByteToWrite &lt; I2C_PageSize */</span><br><span class="line">    <span class="keyword">if</span>(NumOfPage== 0) </span><br><span class="line">    &#123;</span><br><span class="line">      I2C_EE_PageWrite(pBuffer, WriteAddr, NumOfSingle);</span><br><span class="line">    &#125;</span><br><span class="line">    /* If NumByteToWrite &gt; I2C_PageSize */</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">      NumByteToWrite -= count;</span><br><span class="line">      NumOfPage =  NumByteToWrite / EEPROM_PAGESIZE;</span><br><span class="line">      NumOfSingle = NumByteToWrite % EEPROM_PAGESIZE;	</span><br><span class="line">      </span><br><span class="line">      <span class="keyword">if</span>(count != 0)</span><br><span class="line">      &#123;  </span><br><span class="line">        I2C_EE_PageWrite(pBuffer, WriteAddr, count);</span><br><span class="line">        WriteAddr += count;</span><br><span class="line">        pBuffer += count;</span><br><span class="line">      &#125; </span><br><span class="line">      </span><br><span class="line">      <span class="keyword">while</span>(NumOfPage--)</span><br><span class="line">      &#123;</span><br><span class="line">        I2C_EE_PageWrite(pBuffer, WriteAddr, EEPROM_PAGESIZE);</span><br><span class="line">        WriteAddr +=  EEPROM_PAGESIZE;</span><br><span class="line">        pBuffer += EEPROM_PAGESIZE;  </span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span>(NumOfSingle != 0)</span><br><span class="line">      &#123;</span><br><span class="line">        I2C_EE_PageWrite(pBuffer, WriteAddr, NumOfSingle); </span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">uint32_t I2C_EE_ByteWrite(uint8_t* pBuffer, uint8_t WriteAddr)</span><br><span class="line">&#123;</span><br><span class="line">	HAL_StatusTypeDef status = HAL_OK;</span><br><span class="line"></span><br><span class="line">	status = HAL_I2C_Mem_Write(&amp;I2C_Handle, EEPROM_ADDRESS, (uint16_t)WriteAddr, I2C_MEMADD_SIZE_8BIT, pBuffer, 1, 100); </span><br><span class="line"></span><br><span class="line">	/* Check the communication status */</span><br><span class="line">	<span class="keyword">if</span>(status != HAL_OK)</span><br><span class="line">	&#123;</span><br><span class="line">	/* Execute user <span class="built_in">timeout</span> callback */</span><br><span class="line">	//I2Cx_Error(Addr);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (HAL_I2C_GetState(&amp;I2C_Handle) != HAL_I2C_STATE_READY)</span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/* Check <span class="keyword">if</span> the EEPROM is ready <span class="keyword">for</span> a new operation */</span><br><span class="line">	<span class="keyword">while</span> (HAL_I2C_IsDeviceReady(&amp;I2C_Handle, EEPROM_ADDRESS, EEPROM_MAX_TRIALS, I2Cx_TIMEOUT_MAX) == HAL_TIMEOUT);</span><br><span class="line"></span><br><span class="line">	/* Wait <span class="keyword">for</span> the end of the transfer */</span><br><span class="line">	<span class="keyword">while</span> (HAL_I2C_GetState(&amp;I2C_Handle) != HAL_I2C_STATE_READY)</span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">return</span> status;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">uint32_t I2C_EE_PageWrite(uint8_t* pBuffer, uint8_t WriteAddr, uint8_t NumByteToWrite)</span><br><span class="line">&#123;</span><br><span class="line">	HAL_StatusTypeDef status = HAL_OK;</span><br><span class="line">	/* Write EEPROM_PAGESIZE */</span><br><span class="line">	status=HAL_I2C_Mem_Write(&amp;I2C_Handle, EEPROM_ADDRESS,WriteAddr, I2C_MEMADD_SIZE_8BIT, (uint8_t*)(pBuffer),NumByteToWrite, 100);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (HAL_I2C_GetState(&amp;I2C_Handle) != HAL_I2C_STATE_READY)</span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/* Check <span class="keyword">if</span> the EEPROM is ready <span class="keyword">for</span> a new operation */</span><br><span class="line">	<span class="keyword">while</span> (HAL_I2C_IsDeviceReady(&amp;I2C_Handle, EEPROM_ADDRESS, EEPROM_MAX_TRIALS, I2Cx_TIMEOUT_MAX) == HAL_TIMEOUT);</span><br><span class="line"></span><br><span class="line">	/* Wait <span class="keyword">for</span> the end of the transfer */</span><br><span class="line">	<span class="keyword">while</span> (HAL_I2C_GetState(&amp;I2C_Handle) != HAL_I2C_STATE_READY)</span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">return</span> status;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">uint32_t I2C_EE_BufferRead(uint8_t* pBuffer, uint8_t ReadAddr, uint16_t NumByteToRead)</span><br><span class="line">&#123;</span><br><span class="line">	HAL_StatusTypeDef status = HAL_OK;</span><br><span class="line">	</span><br><span class="line">	status=HAL_I2C_Mem_Read(&amp;I2C_Handle,EEPROM_ADDRESS,ReadAddr, I2C_MEMADD_SIZE_8BIT, (uint8_t *)pBuffer, NumByteToRead,1000);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">return</span> status;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*********************************************END OF FILE**********************/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3><span id="at24c02h">AT24C02.h</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#ifndef __AT24C02_H</span></span><br><span class="line"><span class="comment">#define	__AT24C02_H</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#include &quot;stm32f4xx.h&quot;</span></span><br><span class="line"></span><br><span class="line">/* AT24C01/02每页有8个字节 */</span><br><span class="line">//#define EEPROM_PAGESIZE    8</span><br><span class="line"><span class="comment">#define EEPROM_PAGESIZE 	   8</span></span><br><span class="line">/* AT24C04/08A/16A每页有16个字节 */</span><br><span class="line">//#define EEPROM_PAGESIZE           16			</span><br><span class="line"></span><br><span class="line">/* 这个地址只要与STM32外挂的I2C器件地址不一样即可 */</span><br><span class="line"><span class="comment">#define I2C_OWN_ADDRESS7      0X0A   </span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define I2Cx                             I2C1</span></span><br><span class="line"><span class="comment">#define I2Cx_CLK_ENABLE()                __HAL_RCC_I2C1_CLK_ENABLE()</span></span><br><span class="line"><span class="comment">#define I2Cx_SDA_GPIO_CLK_ENABLE()       __HAL_RCC_GPIOB_CLK_ENABLE()</span></span><br><span class="line"><span class="comment">#define I2Cx_SCL_GPIO_CLK_ENABLE()       __HAL_RCC_GPIOB_CLK_ENABLE() </span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define I2Cx_FORCE_RESET()               __HAL_RCC_I2C1_FORCE_RESET()</span></span><br><span class="line"><span class="comment">#define I2Cx_RELEASE_RESET()             __HAL_RCC_I2C1_RELEASE_RESET()</span></span><br><span class="line"></span><br><span class="line">/* Definition <span class="keyword">for</span> I2Cx Pins */</span><br><span class="line"><span class="comment">#define I2Cx_SCL_PIN                    GPIO_PIN_6</span></span><br><span class="line"><span class="comment">#define I2Cx_SCL_GPIO_PORT              GPIOB</span></span><br><span class="line"><span class="comment">#define I2Cx_SCL_AF                     GPIO_AF4_I2C1</span></span><br><span class="line"><span class="comment">#define I2Cx_SDA_PIN                    GPIO_PIN_7</span></span><br><span class="line"><span class="comment">#define I2Cx_SDA_GPIO_PORT              GPIOB</span></span><br><span class="line"><span class="comment">#define I2Cx_SDA_AF                     GPIO_AF4_I2C1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*等待超时时间*/</span><br><span class="line"><span class="comment">#define I2CT_FLAG_TIMEOUT         ((uint32_t)0x1000)</span></span><br><span class="line"><span class="comment">#define I2CT_LONG_TIMEOUT         ((uint32_t)(10 * I2CT_FLAG_TIMEOUT))</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define I2Cx_TIMEOUT_MAX                300</span></span><br><span class="line">/* Maximum number of trials <span class="keyword">for</span> HAL_I2C_IsDeviceReady() <span class="keyword">function</span> */</span><br><span class="line"><span class="comment">#define EEPROM_MAX_TRIALS               300</span></span><br><span class="line"></span><br><span class="line">/*信息输出*/</span><br><span class="line"><span class="comment">#define EEPROM_DEBUG_ON         0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define EEPROM_INFO(fmt,arg...)           printf(&quot;&lt;&lt;-EEPROM-INFO-&gt;&gt; &quot;fmt&quot;\n&quot;,##arg)</span></span><br><span class="line"><span class="comment">#define EEPROM_ERROR(fmt,arg...)          printf(&quot;&lt;&lt;-EEPROM-ERROR-&gt;&gt; &quot;fmt&quot;\n&quot;,##arg)</span></span><br><span class="line"><span class="comment">#define EEPROM_DEBUG(fmt,arg...)          do&#123;\</span></span><br><span class="line">                                          <span class="keyword">if</span>(EEPROM_DEBUG_ON)\</span><br><span class="line">                                          <span class="built_in">printf</span>(<span class="string">&quot;&lt;&lt;-EEPROM-DEBUG-&gt;&gt; [%d]&quot;</span><span class="built_in">fmt</span><span class="string">&quot;\n&quot;</span>,__LINE__, <span class="comment">##arg);\</span></span><br><span class="line">                                          &#125;<span class="keyword">while</span>(0)</span><br><span class="line"></span><br><span class="line">/* </span><br><span class="line"> * AT24C02 2kb = 2048bit = 2048/8 B = 256 B</span><br><span class="line"> * 32 pages of 8 bytes each</span><br><span class="line"> *</span><br><span class="line"> * Device Address</span><br><span class="line"> * 1 0 1 0 A2 A1 A0 R/W</span><br><span class="line"> * 1 0 1 0 0  0  0  0 = 0XA0</span><br><span class="line"> * 1 0 1 0 0  0  0  1 = 0XA1 </span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">/* EEPROM Addresses defines */</span><br><span class="line"><span class="comment">#define EEPROM_Block0_ADDRESS 0xA0   /* E2 = 0 */</span></span><br><span class="line"><span class="comment">#define EEPROM_Block1_ADDRESS 0xA2 /* E2 = 0 */</span></span><br><span class="line"><span class="comment">#define EEPROM_Block2_ADDRESS 0xA4 /* E2 = 0 */</span></span><br><span class="line"><span class="comment">#define EEPROM_Block3_ADDRESS 0xA6 /* E2 = 0 */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define EEPROM_ADDRESS        0xA0</span></span><br><span class="line"></span><br><span class="line">void I2C_EE_Init(void);</span><br><span class="line">										  </span><br><span class="line">void I2C_EE_BufferWrite(uint8_t* pBuffer, uint8_t WriteAddr, uint16_t NumByteToWrite);</span><br><span class="line">uint32_t I2C_EE_ByteWrite(uint8_t* pBuffer, uint8_t WriteAddr);</span><br><span class="line">uint32_t I2C_EE_PageWrite(uint8_t* pBuffer, uint8_t WriteAddr, uint8_t NumByteToWrite);</span><br><span class="line">uint32_t I2C_EE_BufferRead(uint8_t* pBuffer, uint8_t ReadAddr, uint16_t NumByteToRead);</span><br><span class="line"></span><br><span class="line">extern I2C_HandleTypeDef  I2C_Handle; </span><br><span class="line"><span class="comment">#endif /* __I2C_EE_H */</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2><span id="bee">BEE</span></h2><h3><span id="beec">BEE.c</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &quot;bee.h&quot;</span></span><br><span class="line"><span class="comment">#include &lt;string.h&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define MAX_unit_num 200 // 大乐谱数 </span></span><br><span class="line">int tone[3][8];</span><br><span class="line">//初始化高中低 </span><br><span class="line">void tone_init(void)&#123;</span><br><span class="line">	tone[1][0] = 0;	//不执 </span><br><span class="line">	tone[1][1] = 191;</span><br><span class="line">	tone[1][2] = 170;</span><br><span class="line">	tone[1][3] = 151;</span><br><span class="line">	tone[1][4] = 143;</span><br><span class="line">	tone[1][5] = 127;</span><br><span class="line">	tone[1][6] = 113;</span><br><span class="line">	tone[1][7] = 101;</span><br><span class="line">    // 低音 (Low)</span><br><span class="line">    <span class="keyword">for</span> (int i = 0; i &lt; 8; i++) &#123;</span><br><span class="line">        tone[0][i] = tone[1][i] * 2; // 只是近似的值，实际值可能不同</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    // 高音 (High)</span><br><span class="line">    <span class="keyword">for</span> (int i = 0; i &lt; 8; i++) &#123;</span><br><span class="line">        tone[2][i] = tone[1][i] / 2; // 只是近似的值，实际值可能不同</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">//创建结构体保存乐谱</span><br><span class="line">struct music_unit&#123;</span><br><span class="line">	char name[50];		//乐谱名称</span><br><span class="line">	int unit[MAX_unit_num];		//发什么音</span><br><span class="line">	int unit_HL[MAX_unit_num];	//发高音或者其 </span><br><span class="line">	int time[MAX_unit_num];		//发音时间</span><br><span class="line">	//int time_4[MAX_unit_num];	//判断是否 1/4 </span><br><span class="line">	int num;			//记录有多少个</span><br><span class="line">&#125;music[25];</span><br><span class="line"> </span><br><span class="line">//创建乐谱 返回有多少首音乐</span><br><span class="line">int music_init(void)&#123;</span><br><span class="line">	int cnt = 0;</span><br><span class="line">	//第一首音  生日快乐</span><br><span class="line">	strcpy(music[0].name, <span class="string">&quot;生日快乐&quot;</span>); 				// 使用strcpy复制字符  给音乐命 </span><br><span class="line">	int music0_unit[29] = &#123;0,0, 5,5,6,5,1,7, 5,5,6,5,2,1,</span><br><span class="line">								5,5,6,3,1,7, 6,4,4,3,1,2,1,</span><br><span class="line">								0,0&#125;;		//基础乐谱</span><br><span class="line">	int music0_time[29] = &#123;1,1, 1,1,2,2,2,3, 1,1,2,2,2,3,</span><br><span class="line">								2,2,2,2,2,2, 2,2,2,2,2,2,3,</span><br><span class="line">								1,1&#125;;		//乐谱节拍</span><br><span class="line">	music[0].num = 29;										//乐谱总数</span><br><span class="line">	int music0_unit_HL[29] = &#123;1,1,</span><br><span class="line">								0,0,0,0,1,0, 0,0,0,0,1,1,</span><br><span class="line">								0,0,1,1,1,0, 0,1,1,1,1,1,1,</span><br><span class="line">								1,1&#125;; 	//乐谱全为中音</span><br><span class="line"> </span><br><span class="line">	//第二首音   闪一闪亮晶晶</span><br><span class="line">	cnt++;</span><br><span class="line">	strcpy(music[1].name, <span class="string">&quot; 闪一闪亮晶晶&quot;</span>); 					// 使用strcpy复制字符  给音乐命 </span><br><span class="line">	int music1_unit[44] = &#123;0,</span><br><span class="line">						   1,1,5,5,6,6,5, 4,4,3,3,2,2,1,</span><br><span class="line">						   5,5,4,4,3,3,2, 5,5,4,4,3,3,2,</span><br><span class="line">						   1,1,5,5,6,6,5, 4,4,3,3,2,2,1,</span><br><span class="line">						   0&#125;;		//基础乐谱</span><br><span class="line">	int music1_time[44] = &#123;2,</span><br><span class="line">						   2,2,2,2,2,2,3, 2,2,2,2,2,2,3,</span><br><span class="line">						   2,2,2,2,2,2,3, 2,2,2,2,2,2,3,</span><br><span class="line">						   2,2,2,2,2,2,3, 2,2,2,2,2,2,3,</span><br><span class="line">						   2&#125;;		//乐谱节拍</span><br><span class="line">	int music1_unit_HL[44] =</span><br><span class="line">						  &#123;1,</span><br><span class="line">						   1,1,1,1,1,1,1, 1,1,1,1,1,1,1,</span><br><span class="line">						   1,1,1,1,1,1,1, 1,1,1,1,1,1,1,</span><br><span class="line">						   1,1,1,1,1,1,1, 1,1,1,1,1,1,1,</span><br><span class="line">						   1&#125;; 		//乐谱全为中音</span><br><span class="line">	music[1].num = 44;											//乐谱总数</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">	//第三首音谱两只老虎</span><br><span class="line">	cnt++;</span><br><span class="line">	strcpy(music[2].name, <span class="string">&quot;两只老虎&quot;</span>); 					// 使用strcpy复制字符</span><br><span class="line">	int music2_unit[38] = &#123;0,</span><br><span class="line">						   1,2,3,1, 1,2,3,1, 3,4,5,5, 3,4,5,5,</span><br><span class="line">						   5,6,5,4, 3,1,5,6, 5,4,3,1, 1,5,1,1,</span><br><span class="line">						   1,5,1,1, 0&#125;;		//基础乐谱</span><br><span class="line">	int music2_time[38] = &#123;2,</span><br><span class="line">						   1,1,1,1, 1,1,1,1, 1,1,1,1, 1,1,1,1,</span><br><span class="line">						   0,0,0,0, 1,1,0,0, 0,0,1,1, 1,1,1,2,</span><br><span class="line">						   1,1,1,2, 2&#125;;		//乐谱节拍</span><br><span class="line">	int music2_unit_HL[38] =</span><br><span class="line">						  &#123;1,</span><br><span class="line">					       1,1,1,1, 1,1,1,1, 1,1,1,1, 1,1,1,1,</span><br><span class="line">						   1,1,1,1, 1,1,1,1, 1,1,1,1, 1,0,1,1,</span><br><span class="line">						   1,0,1,1, 1&#125;; 		//乐谱    中音</span><br><span class="line">	music[2].num = 38;											//乐谱总数</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">	//第四首音谱青花瓷片 </span><br><span class="line">	cnt++;</span><br><span class="line">	strcpy(music[3].name, <span class="string">&quot;青花瓷片选&quot;</span>); 					// 使用strcpy复制字符</span><br><span class="line">	int music3_unit[100] = &#123;0,0,0,0, 0,5,5,3, 2,3,6,2, 3,5,3,2, 2,5,5,3,</span><br><span class="line">						    2,3,5,2, 3,5,2,1, 1,1,2,3, 5,6,5,4, 5,3,3,2,</span><br><span class="line">						    2,2,1,2, 1,1,2,1, 2,3,5,3, 3,3,5,5, 3,2,3,6,</span><br><span class="line">						    2,3,5,3, 2,2,5,5, 3,2,3,5, 2,3,5,2, 1,1,1,2,</span><br><span class="line">						    3,5,6,5, 4,5,3,3, 2,2,5,3, 2,2,2,1, 1,0,0,0&#125;;		//基础乐谱</span><br><span class="line"> </span><br><span class="line">	int music3_time[100] = &#123;0,0,0,0, 0,0,0,0, 0,0,1,0, 0,0,0,2, 0,0,0,0,</span><br><span class="line">							0,0,1,0, 0,0,0,2, 0,0,0,0, 0,0,0,0, 0,0,0,0,</span><br><span class="line">							2,0,0,0, 0,0,0,0, 0,1,0,0, 2,0,0,0, 0,0,0,1,</span><br><span class="line">							0,0,0,0, 2,0,0,0, 0,0,0,1, 0,0,0,0, 2,0,0,0,</span><br><span class="line">							0,0,0,0, 0,0,0,0, 0,2,0,1, 0,0,0,1, 2,1,1,1&#125;;		//乐谱节拍</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">for</span>(int i =0;i&lt;100;i++)</span><br><span class="line">		music3_time[i] = music3_time[i]+1;</span><br><span class="line"> </span><br><span class="line">	int music3_unit_HL[100] =</span><br><span class="line">						  &#123; 1,1,1,1, 1,1,1,1, 1,1,0,1, 1,1,1,1, 1,1,1,1,</span><br><span class="line">							1,1,0,1, 1,1,1,1, 1,1,1,1, 1,1,1,1, 1,1,1,1,</span><br><span class="line">							1,1,1,1, 1,1,1,1, 1,1,1,1, 1,1,1,1, 1,1,1,0,</span><br><span class="line">							1,1,1,1, 1,1,1,1, 1,1,1,0, 1,1,1,1, 1,1,1,1,</span><br><span class="line">							1,1,1,1, 1,1,1,1, 1,1,0,1, 1,1,1,1, 1,1,1,1&#125;; 		</span><br><span class="line">	music[3].num = 100;											//乐谱总数</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">	<span class="keyword">for</span> (int i = 0; i &lt; MAX_unit_num; i++) &#123;</span><br><span class="line">		//将乐谱保存进结构 </span><br><span class="line">		<span class="keyword">if</span>(i&lt;music[0].num)&#123;//确保数据正确</span><br><span class="line">			music[0].unit[i] =music0_unit[i];</span><br><span class="line">			music[0].unit_HL[i] =music0_unit_HL[i];</span><br><span class="line">			music[0].time[i] =music0_time[i];</span><br><span class="line">		&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">		//将乐谱保存进结构 </span><br><span class="line">		<span class="keyword">if</span>(i&lt;music[1].num)&#123;//确保数据正确</span><br><span class="line">			music[1].unit[i] =music1_unit[i];</span><br><span class="line">			music[1].unit_HL[i] =music1_unit_HL[i];</span><br><span class="line">			music[1].time[i] =music1_time[i];</span><br><span class="line">		&#125;</span><br><span class="line"> </span><br><span class="line">		//将乐谱保存进结构 </span><br><span class="line">		<span class="keyword">if</span>(i&lt;music[2].num)&#123;//确保数据正确</span><br><span class="line">			music[2].unit[i] =music2_unit[i];</span><br><span class="line">			music[2].unit_HL[i] =music2_unit_HL[i];</span><br><span class="line">			music[2].time[i] =music2_time[i];</span><br><span class="line">		&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">		//将乐谱保存进结构 </span><br><span class="line">		<span class="keyword">if</span>(i&lt;music[3].num)&#123;//确保数据正确</span><br><span class="line">			music[3].unit[i] =music3_unit[i];</span><br><span class="line">			music[3].unit_HL[i] =music3_unit_HL[i];</span><br><span class="line">			music[3].time[i] =music3_time[i];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">	<span class="built_in">return</span> cnt;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">void play_music(int n, int x)&#123;</span><br><span class="line">	static int ni = 0; 		//用于判断 是否换了音乐</span><br><span class="line">	static int cnt = 0;		//记录播放到哪个音节</span><br><span class="line">	</span><br><span class="line"> </span><br><span class="line">	//</span><br><span class="line">	int value = tone[music[n].unit_HL[cnt]][music[n].unit[cnt]];	//获取频率</span><br><span class="line">	<span class="keyword">if</span>(flag == 1)&#123;	//接受到一个音节结点</span><br><span class="line">		flag = 0;	//复位</span><br><span class="line">		Beat_num = music[n].time[cnt]; 				//这个音需要多少个半拍</span><br><span class="line"> </span><br><span class="line">		<span class="keyword">if</span>(music[n].time[cnt] == 0)&#123;//如果  1/4 </span><br><span class="line">			Beat_speed_n = Beat_speed /2;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span>&#123;//如果没有1/4 </span><br><span class="line">			Beat_speed_n = Beat_speed;</span><br><span class="line">		&#125;</span><br><span class="line"> </span><br><span class="line">		//if(value != 0)//如果有频率 执行，没有者只更新 时间 </span><br><span class="line">		__HAL_TIM_SET_AUTORELOAD(&amp;htim12,value);		//自动加载频率 </span><br><span class="line"> </span><br><span class="line">		cnt ++; 	//可进行下 次音 </span><br><span class="line">		<span class="keyword">if</span>(cnt &gt;= music[n].num)&#123; //如果 个音节播放完 </span><br><span class="line">			cnt = 0;//重新播放</span><br><span class="line">			//__HAL_TIM_SET_COMPARE(&amp;htim4,TIM_CHANNEL_1,0);//设置音量</span><br><span class="line">			//HAL_Delay(500);//</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	//__HAL_TIM_SET_COMPARE(&amp;htim4,TIM_CHANNEL_1,x * (value/100));//设置音量</span><br><span class="line">	__HAL_TIM_SET_COMPARE(&amp;htim12,TIM_CHANNEL_2,(value/20)*x);//设置音量</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="beeh">BEE.h</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#ifndef __BEE_H</span></span><br><span class="line"><span class="comment">#define __BEE_H		</span></span><br><span class="line"><span class="comment">#include &quot;main.h&quot;</span></span><br><span class="line"><span class="comment">#include &quot;motor.h&quot; </span></span><br><span class="line"><span class="comment">#include &quot;tim.h&quot;</span></span><br><span class="line"></span><br><span class="line">void tone_init(void );</span><br><span class="line">int music_init(void);</span><br><span class="line">void play_music(int n, int x);</span><br></pre></td></tr></table></figure>
+
+<h3><span id="corec">Core.c</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+	</article>
+
+	 
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			                  
+			<!-- 先找到与当前文字相同的目录 -->
+			         
+			<!-- 在找到当前文章所在的 index -->
+			        
+			<!-- 上一篇文章 -->
+			<div class="old">
+				<span>上一章</span>
+				<a href="/2024/12/12/V1%E5%BC%80%E5%8F%91%E6%9D%BF%E7%94%B5%E8%B7%AF%E5%9B%BE/"> V1开发板电路图</a>
+			</div>
+			          
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+			<a class="kirafont icon-container-fill -link" href="/categories/%E5%85%89%E5%88%9B%E5%BC%80%E5%8F%91%E6%9D%BFV1/">光创开发板V1</a>
+		
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+	<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css" />
+	<div id="gitalk"></div>
+	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+	<script type="text/javascript">
+		const gitalk = new Gitalk({
+			clientID: '-id-',
+			clientSecret: '-key-',
+			id: 'V1开发板代码',
+			repo: '-issue repo name-',
+			owner: '-your github username-',
+			admin: '-your github username-',
+			title: '',
+		});
+		gitalk.render('gitalk');
+	</script>
+
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="ch1ny/ch1ny.github.io"
+      data-repo-id="R_kgDOHGgizw"
+      data-category="General"
+      data-category-id="DIC_kwDOHGgiz84CU88t"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>
